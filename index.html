@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio-Reporting – Showcase</title>
+  <style>
+    :root { --bg: #f6f4f4; --card: #ffffff; --text: #3c3c3b; --muted: #6f706f; --accent: #C92230; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1c1a1a; --card: #272424; --text: #ddd8d8; --muted: #a59e9e; --accent: #E0444F; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font-family: "Fira Sans", system-ui, -apple-system, sans-serif; line-height: 1.5; }
+    main { max-width: 44rem; margin: 0 auto; padding: 3rem 1rem; }
+    h1 { font-weight: 500; margin: 0 0 0.3rem; }
+    .lead { color: var(--muted); margin: 0 0 2rem; }
+    .card { background: var(--card); border-radius: 1rem; padding: 1.4rem 1.6rem; margin-bottom: 1rem;
+            box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.06); }
+    .card h2 { font-size: 1.15rem; font-weight: 500; margin: 0 0 0.4rem; }
+    .card p { margin: 0 0 0.9rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .links a { display: inline-block; padding: 0.4rem 1rem; border-radius: 1rem; text-decoration: none;
+               border: 1px solid var(--accent); color: var(--accent); }
+    .links a.primary { background: var(--accent); color: #fff; }
+    .note { font-size: 0.9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Portfolio-Reporting – Showcase</h1>
+  <p class="lead">Reporting für eine Exportrisikoversicherung: ein interaktiver HTML-Bericht und ein
+    Dashboard als macOS-App, beide aus derselben Datengrundlage.</p>
+
+  <section class="card">
+    <h2>HTML-Bericht</h2>
+    <p>Bestand, Geschäftsjahre, Länder, Branchen und Kohorten in einer einzigen Datei; läuft im Browser,
+      auch offline.</p>
+    <div class="links">
+      <a class="primary" href="report.html">Bericht öffnen</a>
+      <a href="report.html" download="portfolio-reporting.html">Herunterladen</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Portfolio-Cockpit für macOS</h2>
+    <p>Kennzahlen mit Drill-down nach Jahr, Branche, Region und Land; heller und dunkler Modus, PDF-Export.</p>
+    <div class="links">
+      <a class="primary" href="https://github.com/thomassie/serv-reporting-showcase-public/releases/latest/download/portfolio-cockpit-arm64.dmg">Herunterladen (.dmg)</a>
+    </div>
+    <p class="note">Für Macs mit Apple-Chip. Die App ist nicht signiert: beim ersten Start mit
+      Rechtsklick → Öffnen starten.</p>
+  </section>
+
+  <p class="note">Alle Daten sind synthetisch: Policen, Exporteure, Länderengagements und Schäden sind
+    erfunden, nur die Summen sind an publizierte Zahlen der SERV angelehnt. Name und Logo der SERV dienen
+    allein der Darstellung; das Projekt ist nicht mit der SERV verbunden und nicht von ihr autorisiert.
+    Autor: Thomas Massie.</p>
+</main>
+</body>
+</html>
